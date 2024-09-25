@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Generic Images */
+        .generic-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .generic-images img {
+            width: 24%;
+            margin: 10px;
+            object-fit: cover;
+            height: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Horizontal Row Images */
+        .horizontal-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .horizontal-row img {
+            width: 32%;
+            height: 250px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mixed Horizontal and Vertical */
+        .mixed-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mixed-row img {
+            width: 32%;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .mixed-row img.vertical {
+            height: 400px;
+        }
+
+        .mixed-row img.horizontal {
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Generic Images Section -->
+        <div class="generic-images">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <img src="https://via.placeholder.com/300" alt="Image 2">
+            <img src="https://via.placeholder.com/300" alt="Image 3">
+            <img src="https://via.placeholder.com/300" alt="Image 4">
+        </div>
+
+        <!-- Horizontal Images Row -->
+        <div class="horizontal-row">
+            <img src="https://via.placeholder.com/600x250" alt="Horizontal Image 1">
+            <img src="https://via.placeholder.com/600x250" alt="Horizontal Image 2">
+            <img src="https://via.placeholder.com/600x250" alt="Horizontal Image 3">
+        </div>
+
+        <!-- Mixed Horizontal and Vertical Images -->
+        <div class="mixed-row">
+            <img class="horizontal" src="https://via.placeholder.com/400x250" alt="Horizontal Image">
+            <img class="vertical" src="https://via.placeholder.com/250x400" alt="Vertical Image">
+            <img class="horizontal" src="https://via.placeholder.com/400x250" alt="Horizontal Image">
+        </div>
+    </div>
+
+</body>
+</html>
